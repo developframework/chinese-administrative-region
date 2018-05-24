@@ -20,6 +20,9 @@ public class Province extends Region {
     @Override
     public boolean equals(Object obj) {
         if(obj != null && obj instanceof Province) {
+            if(obj == this) {
+                return true;
+            }
             final Province otherProvince = (Province) obj;
             return otherProvince.getCode().equals(code) && otherProvince.getName().equals(name);
         }

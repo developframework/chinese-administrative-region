@@ -24,6 +24,9 @@ public class County extends Region{
     @Override
     public boolean equals(Object obj) {
         if(obj != null && obj instanceof County) {
+            if(obj == this) {
+                return true;
+            }
             final County otherCounty = (County) obj;
             return otherCounty.getCode().equals(code) && otherCounty.getName().equals(name);
         }

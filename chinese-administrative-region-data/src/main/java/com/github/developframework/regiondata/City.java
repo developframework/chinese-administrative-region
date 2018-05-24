@@ -26,6 +26,9 @@ public class City extends Region{
     @Override
     public boolean equals(Object obj) {
         if(obj != null && obj instanceof City) {
+            if(obj == this) {
+                return true;
+            }
             final City otherCity = (City) obj;
             return otherCity.getCode().equals(code) && otherCity.getName().equals(name);
         }
